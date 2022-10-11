@@ -25,10 +25,7 @@
 * Windows Client- wc13: 
 To configure windows client install the following softwares using Microsoft Edge browser by opening a bastion session with widnwos client from DTL.
 
-Mozilla Firefox browser
-MySQL Client Shell
-Wireshark
-FileZilla FTP Client
+   Mozilla Firefox browser, MySQL Client Shell, Wireshark, FileZilla FTP Client
 
 * Linux Router Configurations:
  To configure router we need to connect using windows client as bastion first then open command prompt to opn ssh session with router with command
@@ -43,7 +40,7 @@ FileZilla FTP Client
  sudo systemctl enable iptables
  sudo systemctl iptables 
  ```
- Now Enable ip forwarding using following commands and steps
+   Now Enable ip forwarding using following commands and steps
  ```
  sudo sysctl -w net.ipv4.ip_forward=1
  sudo vi /etc/sysctl.conf
@@ -74,7 +71,7 @@ FileZilla FTP Client
  ```
 
 * Windows and Linux Configurations:
-To configure servers we need to access the servers using windows client. First open rdp connection to widnows sever ip addess then install Firefox and wireshark. In Linux server we need to open ssh session to Linux sever ip from command prompt. Run following script in linux serveer for iptables.
+ To configure servers we need to access the servers using windows client. First open rdp connection to widnows sever ip addess then install Firefox and wireshark. In Linux server we need to open ssh session to Linux sever ip from command prompt. Run following script in linux serveer for iptables.
  ```
  sudo systemctl stop firewalld
  sudo systemctl disable firewalld
