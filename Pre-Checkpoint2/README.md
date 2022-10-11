@@ -1,11 +1,11 @@
-+ ## Pre-Checkpoint2 Submission
+ ## Pre-Checkpoint2 Submission
 
-- * COURSE INFORMATION: CSN400 NAA
-- * STUDENT’S NAME: Prabhdeep Kaur Cheema
-- * STUDENT'S NUMBER: 13
-- * GITHUB USER_ID: myseneca-125823203
-- * TEACHER’S NAME: Atoosa Nasiri
-+ 
+ * COURSE INFORMATION: CSN400 NAA
+ * STUDENT’S NAME: Prabhdeep Kaur Cheema
+ * STUDENT'S NUMBER: 13
+ * GITHUB USER_ID: myseneca-125823203
+ * TEACHER’S NAME: Atoosa Nasiri
+ 
 
 # DevTest Lab Configuration
  To create a DTL for CSN400 login to azure portal and search DevTest Lab under search and click create to create a new lab resource. Create a new DTL with name CSN400-DTL and location being the same as the resource group location. After the DTL lab is created click  Lab Configurations and settings to change configurations.
