@@ -6,6 +6,10 @@
  * GITHUB USER_ID: myseneca-125823203
  * TEACHER’S NAME: Atoosa Nasiri
  
+## Table of Contents
+ 1. [DevTest Lab Configuration](##DevTest%20Lab%20Configuration)
+ 2. [Virtual Machines Creation](##Virtual%20Machines%20Creation)
+ 3. [Virtual Machines Configurations](##Virtual%20Machines%20Configurations)
 
 ## DevTest Lab Configuration
  To create a DTL for CSN400 login to azure portal and search DevTest Lab under search and click create to create a new lab resource. Create a new DTL with name CSN400-DTL and location being the same as the resource group location. After the DTL lab is created click  Lab Configurations and settings to change configurations.
