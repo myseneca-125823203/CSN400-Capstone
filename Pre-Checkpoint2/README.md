@@ -35,7 +35,7 @@ FileZilla FTP Client
  ssh pkcheema5@192.168.13.36
  Enter password when prompted then configure the followng tasks to ensure connectivity between the virtual machines.
  Firstly remove firwalld and install iptables
-```
+ ```
  sudo systemctl stop firewalld
  sudo systemctl disable firewalld
  sudo yum remove firewalld
@@ -50,8 +50,36 @@ FileZilla FTP Client
  net.ipv4.ip_forward = 1
  sudo sysctl -p /etc/sysctl.conf
  ```
-
- 
+ For passwordless login to router we will create ssh keys 
+ Run the following command to create ssh rsa keys in router
+ ```
+ ssh-keygen -t rsa
+ ```
+ Accept everything default and press enter every time it prompts for anything. 
+ Now Transfer the public key from router to windows client by command
+ ```
+ scp pkcheema5@192.168.13.36:/home/pkcheema5/.ssh/id_rsa.pub .\.ssh\known_hosts
+ ```
+ At last we would need to add iptables rules to allow access to servers.
+ Create iptables.sh file in home idrectory of pkcheema5 user in router and add following lines in that file.
+ ```
+ sudo iptables -I FORWARD -p tcp -s 172.16.13.36 --sport 3389 -j ACCEPT
+ sudo iptables -I FORWARD -p tcp -d 172.16.13.36 --dport 3389 -j ACCEPT
+ sudo iptables -I FORWARD -p tcp -s 172.16.13.37 --sport 22 -j ACCEPT
+ sudo iptables -I FORWARD -p tcp -d 172.16.13.37 --dport 22 -j ACCEPT
+ ```
+ Then provide execure permissions to iptables.sh file and execute it. After ensuring the connectivities run following commands to save iptables.
+ ```
+ sudo service iptables save
+ ```
 
 * Windows and Linux Configurations:
-To configure servers we 
+To configure servers we need to access the servers using windows client. First open rdp connection to widnows sever ip addess then install Firefox and wireshark. In Linux server we need to open ssh session to Linux sever ip from command prompt. Run following script in linux serveer for iptables.
+ ```
+ sudo systemctl stop firewalld
+ sudo systemctl disable firewalld
+ sudo yum remove firewalld
+ sudo yum install iptables-services
+ sudo systemctl enable iptables
+ sudo systemctl iptables
+ ```
