@@ -34,21 +34,20 @@ FileZilla FTP Client
  To configure router we need to connect using windows client as bastion first then open command prompt to opn ssh session with router with command
  ssh pkcheema5@192.168.13.36
  Enter password when prompted then configure the followng tasks to ensure connectivity between the virtual machines.
-+ Firstly remove firwalld and install iptables
-
-+ sudo systemctl stop firewalld
-+ sudo systemctl disable firewalld
-+ sudo yum remove firewalld
-+ sudo yum install iptables-services
-+ sudo systemctl enable iptables
-+ sudo systemctl iptables
-+ 
-+ Now Enable ip forwarding using following commands and steps
-+ sudo sysctl -w net.ipv4.ip_forward=1
-+ sudo vi /etc/sysctl.conf
-+ net.ipv4.ip_forward = 1
-+ sudo sysctl -p /etc/sysctl.conf
-
+ Firstly remove firwalld and install iptables
+'''
+ sudo systemctl stop firewalld
+ sudo systemctl disable firewalld
+ sudo yum remove firewalld
+ sudo yum install iptables-services
+ sudo systemctl enable iptables
+ sudo systemctl iptables
+ Now Enable ip forwarding using following commands and steps
+ sudo sysctl -w net.ipv4.ip_forward=1
+ sudo vi /etc/sysctl.conf
+ net.ipv4.ip_forward = 1
+ sudo sysctl -p /etc/sysctl.conf
+'''
  
 
 * Windows and Linux Configurations:
