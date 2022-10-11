@@ -35,19 +35,20 @@ FileZilla FTP Client
  ssh pkcheema5@192.168.13.36
  Enter password when prompted then configure the followng tasks to ensure connectivity between the virtual machines.
  Firstly remove firwalld and install iptables
-'''
+<sub>
  sudo systemctl stop firewalld
  sudo systemctl disable firewalld
  sudo yum remove firewalld
  sudo yum install iptables-services
  sudo systemctl enable iptables
- sudo systemctl iptables
+ sudo systemctl iptables </sub>
  Now Enable ip forwarding using following commands and steps
+ <sub>
  sudo sysctl -w net.ipv4.ip_forward=1
  sudo vi /etc/sysctl.conf
  net.ipv4.ip_forward = 1
- sudo sysctl -p /etc/sysctl.conf
-'''
+ sudo sysctl -p /etc/sysctl.conf </sub>
+
  
 
 * Windows and Linux Configurations:
