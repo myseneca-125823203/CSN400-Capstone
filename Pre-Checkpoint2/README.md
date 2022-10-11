@@ -36,8 +36,8 @@ FileZilla FTP Client
  Enter password when prompted then configure the followng tasks to ensure connectivity between the virtual machines.
  Firstly remove firwalld and install iptables
 
- sudo systemctl stop firewalld
- sudo systemctl disable firewalld
+ sudo systemctl stop firewalld \n
+ sudo systemctl disable firewalld \n
  sudo yum remove firewalld
  sudo yum install iptables-services
  sudo systemctl enable iptables
