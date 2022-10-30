@@ -9,7 +9,7 @@
 
 ## Table Of Contents:
 1. [Iptable Firewall Rules for lr13](##Iptable%20firwall%20Rules%20for%lr13)
-2. [Script](##Script)
+2. [CP3-lr-firewall-13.sh Script](##CP3-lr-firewall-13.sh%20Script)
 3. [Iptable rules listing for lr13](##Iptable%20rules%20listing%20for%lr13)
 4. [Iptable rules listing for ls13](##Iptable%20rules%20listing%20for%ls13)
 
@@ -31,7 +31,7 @@ sudo iptables -I FORWARD -p icmp -d 172.17.13.36 -j ACCEPT
 sudo iptables -I FORWARD -p icmp -s 172.17.13.36 -j ACCEPT
 ```
 
- * Script
+ * CP3-lr-firewall-13.sh Script
 ```
 sudo iptables -F
 sudo iptables -X
