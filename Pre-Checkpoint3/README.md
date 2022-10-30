@@ -7,9 +7,13 @@
  * TEACHER’S NAME: Atoosa Nasiri
  * ASSIGNMENT REF: PreCheckpoint3
 
+## Table Of Contents:
+1. [Iptable Firewall Rules for lr13](##Iptable%20firwall%20Rules%20for%lr13)
+2. [Script](##Script)
+3. [Iptable rules listing for lr13](##Iptable%20rules%20listing%20for%lr13)
+4. [Iptable rules listing for ls13](##Iptable%20rules%20listing%20for%ls13)
 
-
- * Iptable Firewall RUles for lr13
+ * Iptable Firewall Rules for lr13
  ```
 sudo iptables -F
 sudo iptables -X
@@ -46,7 +50,7 @@ sudo iptables -I FORWARD -p icmp -s 172.17.13.36 -j ACCEPT
 ```
 
  * Iptable rules listing for lr13
- image.png
+ https://github.com/myseneca-125823203/CSN400-Capstone/blob/main/Pre-Checkpoint3/image.png
 
  * Iptables rues listing for ls13
- Untitled.png
+ https://github.com/myseneca-125823203/CSN400-Capstone/blob/main/Pre-Checkpoint3/Untitled.png
