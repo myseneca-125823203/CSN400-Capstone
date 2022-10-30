@@ -50,11 +50,9 @@ sudo iptables -I FORWARD -p icmp -s 172.17.13.36 -j ACCEPT
 ```
 
  * Iptable rules listing for lr13
- https://github.com/myseneca-125823203/CSN400-Capstone/blob/main/Pre-Checkpoint3/image.png
 
  ![](image.png)
 
  * Iptables rues listing for ls13
- https://github.com/myseneca-125823203/CSN400-Capstone/blob/main/Pre-Checkpoint3/Untitled.png
 
  ![](Untitled.png)
